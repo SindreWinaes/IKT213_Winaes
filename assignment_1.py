@@ -19,3 +19,19 @@ def print_image_informations(img):
 
 print_image_informations(img)
 
+
+
+video_capture = cv2.VideoCapture(0)
+
+frame_width = int(video_capture.get(cv2.CAP_PROP_FRAME_WIDTH))
+frame_height = int(video_capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
+fps = video_capture.get(cv2.CAP_PROP_FPS)
+
+output_file = "camera_output.txt"
+
+with open(output_file, "w") as f:
+    f.write("Frame width: " + str(frame_width) + "\n")
+    f.write("Frame height: " + str(frame_height) + "\n")
+    f.write("FPS: " + str(fps) + "\n")
+
+
