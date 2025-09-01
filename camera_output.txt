@@ -1,3 +1,0 @@
-Frame width: 640
-Frame height: 480
-FPS: 30.0
